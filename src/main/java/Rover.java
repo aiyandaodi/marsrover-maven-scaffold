@@ -23,7 +23,7 @@ public class Rover {
     }
 
     public void move() {
-        if (this.e.equals("E")){
+        if (this.e.equals("E")) {
             area.setX(area.getX() + 1);
         }
         if (this.e.equals("W")) {
@@ -40,31 +40,25 @@ public class Rover {
     public void turnLeft() {
         if (e.equals(EAST)) {
             e = NORTH;
-            return;
-        }if (e.equals(NORTH)) {
+        } else if (e.equals(NORTH)) {
             e = WEST;
-            return;
-        }if (e.equals(WEST)) {
+        } else if (e.equals(WEST)) {
             e = SOUTH;
-            return;
-        }if (e.equals(SOUTH)) {
+        } else if (e.equals(SOUTH)) {
             e = EAST;
-            return;
         }
+        return;
     }
     public void turnRight() {
         if (e.equals(EAST)) {
             e = SOUTH;
-            return;
-        }if (e.equals(SOUTH)) {
+        } else if (e.equals(SOUTH)) {
             e = WEST;
-            return;
-        }if (e.equals(WEST)) {
+        } else if (e.equals(WEST)) {
             e = NORTH;
-            return;
-        }if (e.equals(NORTH)) {
+        } else if (e.equals(NORTH)) {
             e = EAST;
-            return;
         }
+        return;
     }
 }
